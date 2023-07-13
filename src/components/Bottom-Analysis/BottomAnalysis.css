@@ -1,0 +1,31 @@
+.b-category {
+  width: 100%;
+  font-size: 1rem;
+  color: gray;
+  font-weight: 600;
+}
+
+.b-value {
+  font-size: 1.375rem;
+  color: black;
+  display: block;
+  font-weight: 700;
+}
+
+.b-analysis {
+  padding: 2rem;
+  /* margin: 0rem 3rem 0; */
+}
+
+.b-analysis-row {
+  padding: 0 25%;
+}
+
+.b-analysis-col {
+  text-align: center;
+  padding: 1rem;
+}
+
+.bgcolor {
+  background-color: #212529;
+}
