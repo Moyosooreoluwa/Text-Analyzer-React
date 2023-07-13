@@ -1,10 +1,12 @@
 import './App.css';
-import Nav from './components/navbar/Navigation';
+import Nav from './components/Navbar/Navigation';
+import TopAnalysis from './components/Top-Analysis/TopAnalysis';
 
 function App() {
   return (
     <div>
-      <Nav></Nav>
+      <Nav />
+      <TopAnalysis />
     </div>
   );
 }
