@@ -1,8 +1,8 @@
+import './BottomAnalysis.css';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-import './BottomAnalysis.css';
 
 const BottomAnalysis = () => {
   const analysis = [
@@ -17,18 +17,18 @@ const BottomAnalysis = () => {
   ];
 
   return (
-    <div>
-      <Container fluid className="b-analysis ">
+    <>
+      <Container fluid className="p-4 ">
         <Row className="justify-content-md-center b-analysis-row ">
           {analysis.map(({ category, value }) => (
-            <Col key={category} className="b-analysis-col bgcolor">
-              <span className="b-value bgcolor">{value}</span>
-              <span className="b-category bgcolor">{category}</span>
+            <Col key={category} className=" p-3 b-analysis-col bg-bottom">
+              <span className="b-value bg-bottom">{value}</span>
+              <span className="b-category bg-bottom">{category}</span>
             </Col>
           ))}
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

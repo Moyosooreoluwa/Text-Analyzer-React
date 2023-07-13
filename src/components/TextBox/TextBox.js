@@ -5,9 +5,9 @@ import Form from 'react-bootstrap/Form';
 const TextBox = () => {
   return (
     <>
-      <div className="textbox">
-        <Form className="textbox-area">
-          <Form.Group controlId="textbox-area">
+      <div className="textbox bg-tb py-5">
+        <Form className="textbox-area bg-tb">
+          <Form.Group controlId="textbox-area bg-tb">
             <Form.Control
               type="text"
               as="textarea"
