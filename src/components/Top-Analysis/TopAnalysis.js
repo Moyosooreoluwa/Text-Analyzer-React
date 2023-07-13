@@ -4,23 +4,71 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const TopAnalysis = () => {
+const TopAnalysis = ({ text }) => {
+  const countWords = () => {
+    // Remove leading/trailing spaces and multiple consecutive spaces
+    const trimmedText = text.trim().replace(/\s+/g, ' ');
+
+    // Split the trimmed text into words
+    const words = trimmedText.split(' ');
+
+    // Filter out empty words
+    const filteredWords = words.filter((word) => word !== '');
+
+    // Return the count of filtered words
+    return filteredWords.length;
+  };
+
+  function countCharacters() {
+    // Remove spaces to count non-whitespace characters only
+    const trimmedText = text.replace(/\s/g, '');
+
+    // Return the count of characters
+    return trimmedText.length;
+  }
+
+  function countSentences() {
+    // Split the text into sentences using punctuation marks as delimiters
+    const sentences = text.split(/[.!?]+/);
+
+    // Filter out empty sentences
+    const filteredSentences = sentences.filter(
+      (sentence) => sentence.trim() !== ''
+    );
+
+    // Return the lenght of filtered sentences
+    return filteredSentences.length;
+  }
+
+  function countParagraphs() {
+    // Split the text into paragraphs using newline characters as delimiters
+    const paragraphs = text.split(/\n+/);
+
+    // Filter out empty paragraphs
+    const filteredParagraphs = paragraphs.filter(
+      (paragraph) => paragraph.trim() !== ''
+    );
+
+    // Return the length of filtered paragraphs
+    return filteredParagraphs.length;
+  }
+
   const analysis = [
     {
       category: 'Words',
-      value: 0,
+      value: countWords(),
     },
     {
       category: 'Characters',
-      value: 0,
+      value: countCharacters(),
     },
     {
       category: 'Sentences',
-      value: 0,
+      value: countSentences(),
     },
     {
       category: 'Paragraphs ',
-      value: 0,
+      value: countParagraphs(),
     },
   ];
 

@@ -1,31 +1,30 @@
 import './App.css';
-import BottomAnalysis from './components/Bottom-Analysis/BottomAnalysis';
+
 import Navigation from './components/Navbar/Navigation';
-import TextBox from './components/TextBox/TextBox';
-import TopAnalysis from './components/Top-Analysis/TopAnalysis';
 import Navbar from 'react-bootstrap/Navbar';
 import github from './assets/images/github.ico';
+import Analysis from './components/Analysis/Analysis';
 
 import Container from 'react-bootstrap/Container';
 import NavbarBrand from 'react-bootstrap/NavbarBrand';
 import Nav from 'react-bootstrap/Nav';
+import Image from 'react-bootstrap/Image';
+
 function App() {
   return (
     <>
       <Navigation />
-      <TopAnalysis />
-      <TextBox />
-      <BottomAnalysis />
+      <Analysis />
       <Navbar expand="lg" bg="dark" data-bs-theme="dark">
         <Container className="bg-footer">
-          <NavbarBrand className="bg-footer">M.A.I.</NavbarBrand>
+          <NavbarBrand className="bg-footer">M. A. I.</NavbarBrand>
           <Nav className="icon-bar bg-footer">
             <Nav.Link
               className="bg-footer"
               href="https://github.com/Moyosooreoluwa"
               target="__blank"
             >
-              <img src={github} className="icon" alt="" />
+              <Image src={github} className="icon" alt="" roundedCircle />
             </Nav.Link>
           </Nav>
         </Container>

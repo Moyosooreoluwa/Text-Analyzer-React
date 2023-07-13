@@ -1,8 +1,17 @@
+import { useState } from 'react';
 import './TextBox.css';
 
 import Form from 'react-bootstrap/Form';
 
-const TextBox = () => {
+const TextBox = ({ onTextChange }) => {
+  const [text, setText] = useState('');
+
+  const handleTextChange = (event) => {
+    const newText = event.target.value;
+    setText(newText);
+    onTextChange(newText);
+  };
+
   return (
     <>
       <div className="textbox bg-tb py-5">
@@ -14,6 +23,8 @@ const TextBox = () => {
               rows={15}
               placeholder="Paste your text here."
               color="red"
+              value={text}
+              onChange={handleTextChange}
             />
           </Form.Group>
         </Form>
