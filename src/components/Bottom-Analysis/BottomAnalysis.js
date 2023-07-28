@@ -18,15 +18,25 @@ const BottomAnalysis = ({ text }) => {
   }
 
   function getLongestWord() {
-    // Removing punctuation marks and splitting the text into an array of words
-    const words = text.replace(/[^\w\s]/g, '').split(/\s+/);
+    // Split the text into individual words by whitespace (space, tab, newline, etc.)
+    const words = text.split(/\s+/);
 
+    // Initialize variables to keep track of the longest word and its length
     let longestWord = '';
-    for (let i = 0; i < words.length; i++) {
-      if (words[i].length > longestWord.length) {
-        longestWord = words[i];
-      } else {
-        longestWord = '-';
+    let longestLength = 0;
+
+    // Iterate through each word
+    for (const word of words) {
+      // Remove any non-alphanumeric characters (optional step)
+      const cleanedWord = word.replace(/[^A-Za-z0-9]/g, '');
+
+      // Get the length of the cleaned word
+      const wordLength = cleanedWord.length;
+
+      // Check if the current word is longer than the previously longest word
+      if (wordLength > longestLength) {
+        longestWord = cleanedWord;
+        longestLength = wordLength;
       }
     }
 
