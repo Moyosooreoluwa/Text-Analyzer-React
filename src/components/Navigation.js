@@ -1,4 +1,4 @@
-import '../components/Navbar/Navigation.css';
+import './Navigation.css';
 
 import Navbar from 'react-bootstrap/Navbar';
 import NavbarBrand from 'react-bootstrap/NavbarBrand';
@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
-import github from '../assets/images/github.ico';
+import github from '../assets/github.ico';
 const Navigation = () => {
   return (
     <>

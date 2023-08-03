@@ -2,8 +2,8 @@ import './App.css';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Navigation from './components/Navigation';
-import github from './assets/images/github.ico';
-import Analysis from './components/Analysis/Analysis';
+import github from './assets/github.ico';
+import Analysis from './components/Analysis';
 
 import Container from 'react-bootstrap/Container';
 import NavbarBrand from 'react-bootstrap/NavbarBrand';

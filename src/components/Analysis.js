@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import BottomAnalysis from '../Bottom-Analysis/BottomAnalysis';
-import TextBox from '../TextBox/TextBox';
-import TopAnalysis from '../Top-Analysis/TopAnalysis';
+import BottomAnalysis from './BottomAnalysis';
+import TextBox from './TextBox';
+import TopAnalysis from './TopAnalysis';
 
 const Analysis = () => {
   const [text, setText] = useState('');
