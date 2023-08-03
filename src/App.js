@@ -1,7 +1,7 @@
 import './App.css';
 
-import Navigation from './components/Navbar/Navigation';
 import Navbar from 'react-bootstrap/Navbar';
+import Navigation from './components/Navigation';
 import github from './assets/images/github.ico';
 import Analysis from './components/Analysis/Analysis';
 
