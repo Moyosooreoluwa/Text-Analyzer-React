@@ -34,9 +34,7 @@ const BottomAnalysis = ({ text }) => {
       const wordLength = cleanedWord.length;
 
       // Check if the current word is longer than the previously longest word
-      if (wordLength === 0) {
-        longestWord = '-';
-      } else if (wordLength > longestLength) {
+      if (wordLength > longestLength) {
         longestWord = cleanedWord;
         longestLength = wordLength;
       }
