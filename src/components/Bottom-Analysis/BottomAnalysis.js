@@ -22,8 +22,8 @@ const BottomAnalysis = ({ text }) => {
     const words = text.split(/\s+/);
 
     // Initialize variables to keep track of the longest word and its length
-    let longestWord = '';
     let longestLength = 0;
+    let longestWord = '';
 
     // Iterate through each word
     for (const word of words) {
